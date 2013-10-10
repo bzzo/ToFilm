@@ -20,6 +20,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 
 		int a= 1;
+		int b=2;
 		
 //		new Thread(new Runnable() {
 //
