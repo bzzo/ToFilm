@@ -8,5 +8,11 @@
     <string name="tab_words">tab_words</string>
     <string name="tab_numbers">tab_numbers</string>
     
+    
+    <string name="tab1_fragment_string">tab1_fragment_string</string>
+    <string name="tab2_fragment_string">tab2_fragment_string</string>
+    <string name="tab3_fragment_string">tab3_fragment_string</string>
+    
+    
 
 </resources>
