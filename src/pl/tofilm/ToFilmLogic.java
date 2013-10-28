@@ -12,7 +12,7 @@ public class ToFilmLogic {
 	private static String LOG_CLASS_NAME = "ToFilmLogic";
 	private static List<ToFilmProgramItem> programTable;
 
-	public static void reloadTimeTable(ToFilmOnTaskCompletedInterface listener) {
+	public static void reloadProgramTable(ToFilmOnTaskCompletedInterface listener) {
 		try {
 
 			programTable = new ArrayList<ToFilmProgramItem>();

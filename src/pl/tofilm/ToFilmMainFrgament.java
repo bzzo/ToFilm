@@ -25,7 +25,7 @@ public class ToFilmMainFrgament extends ToFilmBaseFragmentActivity implements
 		mTabHost.addTab(mTabHost.newTabSpec("tab3").setIndicator("Tab3"),
 				ToFilmSettingsPanelFragment.class, null);
 
-		ToFilmLogic.reloadTimeTable(this);
+		ToFilmLogic.reloadProgramTable(this);
 	}
 
 	@Override

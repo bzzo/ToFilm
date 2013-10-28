@@ -15,6 +15,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 import pl.tofilm.ToFilmProgramItem;
+import pl.tofilm.ToFilmProgramItem.ProgramType;
 import pl.tofilm.ToFilmProgramItemComparator;
 
 import android.os.AsyncTask;
@@ -94,7 +95,7 @@ public class ToFilmProgramLoader extends
 		return null;
 	}
 
-	private void parseHtml(Document document,
+	private void parseSuggestions(Document document,
 			List<ToFilmProgramItem> programTable) {
 		try {
 			// Elements tableInside =
@@ -183,13 +184,25 @@ public class ToFilmProgramLoader extends
 				// }
 				// }
 
-				ToFilmProgramItem element = new ToFilmProgramItem(title, hourAndStation, image, link, titleFull);
+				ToFilmProgramItem element = new ToFilmProgramItem(title,
+						hourAndStation, image, link, titleFull,
+						ProgramType.SUGGESTIONS);
 
 				// if (element.getCityText().toUpperCase()
 				// .startsWith(destinationPrefix))
 				programTable.add(element);
 				// }
 			}
+		} catch (Exception e) {
+			Log.e(LOG_CLASS_NAME, "parseSuggestions error:" + e.getMessage());
+		}
+	}
+
+	private void parseHtml(Document document,
+			List<ToFilmProgramItem> programTable) {
+		try {
+			parseSuggestions(document, programTable);
+			parseGeneral(document, programTable);
 		} catch (Exception e) {
 			e.printStackTrace();
 			Log.e(LOG_CLASS_NAME, "parseHtml error: " + e.getMessage());
