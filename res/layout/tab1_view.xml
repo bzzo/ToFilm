@@ -6,10 +6,15 @@
     android:orientation="vertical"
     tools:context=".DeviceFragment" >
 
-    <TextView
-        android:id="@+id/main_panel_info_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tab1_fragment_string" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/main_panel_info_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab1_fragment_string" />
+    </ScrollView>
 
 </LinearLayout>

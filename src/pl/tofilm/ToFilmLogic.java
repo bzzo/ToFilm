@@ -35,7 +35,7 @@ public class ToFilmLogic {
 		try {
 			StringBuilder builder = new StringBuilder();
 			for (ToFilmProgramItem item : programTable) {
-				builder.append(item.getHourAndStation());
+				builder.append(item.getDateTime());
 				builder.append(" ");
 				builder.append(item.getTitle());
 				builder.append(" ");
